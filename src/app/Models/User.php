@@ -10,7 +10,7 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    //use HasFactory<\Database\Factories\UserFactory> 
+    //use HasFactory<\Database\Factories\UserFactory>
     use HasFactory, Notifiable;
 
     protected $fillable = [
@@ -36,7 +36,7 @@ class User extends Authenticatable
         ];
     }
 
-    // Relations 
+    // Relations
 
     public function colocations(): BelongsToMany
     {
@@ -65,7 +65,7 @@ class User extends Authenticatable
         return $this->hasMany(Settlement::class, 'to_user_id');
     }
 
-    //Helpers 
+    //Helpers
 
     public function isAdmin(): bool
     {
